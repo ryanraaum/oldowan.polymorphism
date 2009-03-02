@@ -1,6 +1,6 @@
 from types import IntType
 
-class PolymorphismRange:
+class PolymorphismRange(object):
     
     def __init__(self, *range_tuples):
         self.range_tuples = range_tuples
@@ -19,3 +19,11 @@ class PolymorphismRange:
             if position >= start and position <= end: 
                 return True 
         return False
+
+
+class InfiniteRange(PolymorphismRange):
+
+    def __eq__(self, other):
+        if type(other) != IntType and not hasattr(other, "position"):
+            raise ArgumentError
+        return True
