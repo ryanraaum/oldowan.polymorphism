@@ -1,0 +1,42 @@
+Utilities for the management of molecular polymorphism data.
+
+oldowan.polymorphism is a small bioinformatic utility for the management
+of molecular polymorphism data.
+
+Installation Instructions
+=========================
+
+This package is pure Python and has no dependencies outside of the standard
+library. The easist way to install is using ``easy_install`` from the
+setuptools_ package.  This usually goes something like this::
+
+	$ easy_install oldowan.polymorphism
+
+or on a unix-like system, assuming you are installing to the main Python
+``site-packages`` directory as a non-privileged user, this::
+
+	$ sudo easy_install oldowan.polymorphism
+
+You may also use the standard python distutils setup method. Download the
+current source archive from the file list towards the bottom of this page,
+unarchive it, and install. On Mac OS X and many other unix-like systems, having
+downloaded the archive and changed to the directory containing this archive in
+your shell, this might go something like::
+
+	$ tar xvzf oldowan.polymorphism*
+	$ cd oldowan.polymorphism*
+	$ python setup.py install
+
+Quick Start
+===========
+
+TODO
+
+Release History
+===============
+
+TODO (August 16, 2008)
+    initial release of module.
+
+
+.. _setuptools: http://peak.telecommunity.com/DevCenter/EasyInstall
