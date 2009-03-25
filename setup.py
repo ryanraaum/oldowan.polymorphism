@@ -3,8 +3,12 @@ import sys, os
 
 desc_lines = open('README', 'r').readlines()
 
+version_file = open(os.path.join(os.path.dirname(os.path.realpath(__file__)),'oldowan','polymorphism', 'VERSION'))
+version = version_file.read().strip()
+version_file.close()
+
 setup(name='oldowan.polymorphism',
-      version='1.0.0',
+      version=version,
       description=desc_lines[0],
       long_description=''.join(desc_lines[2:]),
       classifiers=[
@@ -22,8 +26,9 @@ setup(name='oldowan.polymorphism',
       url='http://www.raaum.org/software/oldowan',
       license='MIT',
       packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
-      include_package_data=False,
       namespace_packages = ['oldowan'],
+      include_package_data=False,
+      data_files=[("oldowan/polymorphism", ["oldowan/polymorphism/VERSION"])],
       zip_safe=False,
       test_suite = 'nose.collector',
       )

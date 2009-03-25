@@ -30,13 +30,32 @@ your shell, this might go something like::
 Quick Start
 ===========
 
-TODO
+This package provides a single utility class, ``Polymorphism``. Import
+this class from oldowan.polymorphism::
+
+  >>> from oldowan.polymorphism import Polymorphism
+
+Create a new Polymorphism object::
+
+  >>> p1 = Polymorphism(16223,0,'A','T')
+
+The Polymorphism constructor requires 3 arguments and accepts and optional
+fourth argument. These are (in order):
+
+  1. ``position``, integer.  
+  2. ``insert``, 0 if polymorphism is exactly at that position, or 1,2,3,... if
+     insertion after.  
+  3. ``value``, character value of polymorphism 
+  4. ``reference``, optional value of a reference sequence at that position
+
 
 Release History
 ===============
 
-TODO (August 16, 2008)
+1.0.0 (March 25, 2009)
     initial release of module.
 
+1.0.1 (March 25, 2009)
+    minor update for correct version numbering
 
 .. _setuptools: http://peak.telecommunity.com/DevCenter/EasyInstall
