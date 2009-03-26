@@ -1,1 +1,1 @@
-include oldowan/polymorphism/VERSION
+include oldowan/*/VERSION

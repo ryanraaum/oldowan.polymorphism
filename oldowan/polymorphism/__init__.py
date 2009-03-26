@@ -2,9 +2,7 @@
 
 import os
 
-version_file = open(os.path.join(os.path.dirname(os.path.realpath(__file__)), 'VERSION'))
-version = version_file.read().strip()
-version_file.close()
+VERSION = open(os.path.join(os.path.dirname(os.path.realpath(__file__)), 'VERSION')).read().strip()
 
 __all__ = ['Polymorphism',
            'PolymorphismRange',

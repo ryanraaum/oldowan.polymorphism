@@ -1,14 +1,14 @@
 from setuptools import setup, find_packages
 import sys, os
 
+PACKAGE = 'polymorphism'
+
+VERSION = open(os.path.join(os.path.dirname(os.path.realpath(__file__)),'oldowan', PACKAGE, 'VERSION')).read().strip()
+
 desc_lines = open('README', 'r').readlines()
 
-version_file = open(os.path.join(os.path.dirname(os.path.realpath(__file__)),'oldowan','polymorphism', 'VERSION'))
-version = version_file.read().strip()
-version_file.close()
-
-setup(name='oldowan.polymorphism',
-      version=version,
+setup(name='oldowan.%s' % PACKAGE,
+      version=VERSION,
       description=desc_lines[0],
       long_description=''.join(desc_lines[2:]),
       classifiers=[
@@ -28,7 +28,7 @@ setup(name='oldowan.polymorphism',
       packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
       namespace_packages = ['oldowan'],
       include_package_data=False,
-      data_files=[("oldowan/polymorphism", ["oldowan/polymorphism/VERSION"])],
+      data_files=[("oldowan/%s" % PACKAGE, ["oldowan/%s/VERSION" % PACKAGE])],
       zip_safe=False,
       test_suite = 'nose.collector',
       )
