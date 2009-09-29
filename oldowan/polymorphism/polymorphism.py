@@ -1,4 +1,5 @@
 
+
 class Polymorphism(object):
 
     def __init__(self, position, insert, value, reference=''):
@@ -31,7 +32,7 @@ class Polymorphism(object):
     def is_transition(self):
         changes = [self.value, self.reference]
         changes.sort()
-        change = ('%s%s' % tuple(changes)).upper() 
+        change = ('%s%s' % tuple(changes)).upper()
         return self.is_substitution() and change in ['AG', 'CT']
 
     def is_transversion(self):
@@ -42,5 +43,3 @@ class Polymorphism(object):
 
     def is_deletion(self):
         return self.value in ['-']
-
-
