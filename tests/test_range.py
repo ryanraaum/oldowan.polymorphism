@@ -1,5 +1,6 @@
 from oldowan.polymorphism import PolymorphismRange, InfiniteRange
 from oldowan.polymorphism import Polymorphism
+from nose.tools import raises
 
 def test_polymorphism_range_ints():
     pr = PolymorphismRange((1,10), (20,30))
@@ -72,4 +73,10 @@ def test_infinite_range_polys():
     assert p7 in pr
     assert p8 in pr
     assert p9 in pr
+
+@raises(AttributeError)
+def test_polymorphism_range_compare_error():
+    p0 = Polymorphism(1,0,'A','T')
+    p0=='monkey'
+
 

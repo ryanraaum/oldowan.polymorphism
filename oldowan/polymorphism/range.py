@@ -14,8 +14,6 @@ class PolymorphismRange(object):
         if type(other) != IntType:
             if hasattr(other, "position"):
                 position = other.position
-            else:
-                raise TypeError
         for start, end in self.range_tuples:
             if position >= start and position <= end:
                 return True
