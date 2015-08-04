@@ -58,4 +58,7 @@ Release History
 1.0.1 (March 25, 2009)
     minor update for correct version numbering
 
+1.0.2 (August 4, 2015)
+    actually fixed the version numbering this time
+
 .. _setuptools: http://peak.telecommunity.com/DevCenter/EasyInstall
